@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="576.0" prefWidth="856.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.GGTransController">
+   <children>
+      <AnchorPane layoutX="43.0" layoutY="195.0">
+         <children>
+            <TextArea fx:id="sourceText" onKeyReleased="#handleSourceTextArea" prefHeight="350.0" prefWidth="350.0" style="-fx-border-radius: 2em;" styleClass="text-area" stylesheets="@Style.css">
+               <font>
+                  <Font size="18.0" />
+               </font></TextArea>
+            <TextArea fx:id="targetText" editable="false" layoutX="421.0" prefHeight="350.0" prefWidth="350.0" style="-fx-border-radius: 2em;" styleClass="text-area" stylesheets="@Style.css">
+               <font>
+                  <Font size="18.0" />
+               </font></TextArea>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="43.0" layoutY="16.0">
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="129.0" layoutX="514.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/Google_2015_logo.svg.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="68.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/Google_Translate_logo.svg.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="651.0" layoutY="11.0" text="Translate" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="sourceVoice" graphicTextGap="0.0" layoutX="55.0" layoutY="487.0" mnemonicParsing="false" onMouseClicked="#handleSourceVoice" stylesheets="@Style.css" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <tooltip>
+            <Tooltip text="Listen">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+         <styleClass>
+            <String fx:value="transparent-button" />
+            <String fx:value="zoomButton" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="geeks">
+               <image>
+                  <Image url="@Image/sound_6711418.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="targetVoice" graphicTextGap="0.0" layoutX="482.0" layoutY="487.0" mnemonicParsing="false" onMouseClicked="#handleTargetVoice" stylesheets="@Style.css" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="geeks">
+               <image>
+                  <Image url="@Image/sound_6711418.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <styleClass>
+            <String fx:value="transparent-button" />
+            <String fx:value="zoomButton" />
+         </styleClass>
+         <tooltip>
+            <Tooltip text="Listen">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+      </Button>
+      <ComboBox fx:id="sourceLanguage" layoutX="43.0" layoutY="139.0" prefHeight="34.0" prefWidth="350.0" promptText="English" styleClass="ComboBox" stylesheets="@Style.css" />
+      <ComboBox fx:id="targetLanguage" layoutX="464.0" layoutY="139.0" prefHeight="34.0" prefWidth="350.0" promptText="Vietnamese" styleClass="ComboBox" stylesheets="@Style.css" />
+   </children>
+</AnchorPane>

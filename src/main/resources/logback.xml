@@ -1,0 +1,6 @@
+<configuration>
+    <logger name="com.j256.ormlite" level="OFF" />
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>
